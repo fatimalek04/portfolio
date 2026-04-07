@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fatemeh Malekpour | Portfolio</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --navy:#1a2e4a;
+    --teal:#2a7d6f;
+    --teal-light:#e8f5f2;
+    --text:#1e1e1e;
+    --muted:#555;
+    --border:#ddd;
+    --white:#fff;
+    --bg:#f9f9f7;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);font-size:16px;line-height:1.7;}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 2rem;}
+  nav ul{display:flex;list-style:none;gap:0;max-width:900px;margin:0 auto;}
+  nav a{display:block;padding:1rem 1.25rem;color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;letter-spacing:0.03em;transition:color 0.2s;}
+  nav a:hover{color:#fff;}
+
+  /* SECTIONS */
+  section{padding:5rem 2rem;}
+  .container{max-width:860px;margin:0 auto;}
+
+  /* HERO */
+  #hero{background:var(--navy);color:#fff;padding:7rem 2rem 6rem;}
+  #hero .container{display:flex;flex-direction:column;gap:1rem;}
+  .hero-tag{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);}
+  #hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:600;line-height:1.2;}
+  #hero h1 span{color:#6ecfbf;}
+  #hero p{font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:580px;}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;}
+  .btn{padding:0.6rem 1.4rem;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;transition:opacity 0.2s;}
+  .btn-primary{background:#6ecfbf;color:#0d2b25;}
+  .btn-outline{border:1.5px solid rgba(255,255,255,0.4);color:#fff;}
+  .btn:hover{opacity:0.85;}
+
+  /* SECTION HEADERS */
+  .section-label{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:0.4rem;}
+  h2{font-size:1.8rem;font-weight:600;margin-bottom:1.5rem;color:var(--navy);}
+
+  /* FIELD OF STUDY */
+  #field{background:var(--teal-light);}
+  .field-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+  .field-card{background:#fff;border-radius:10px;padding:1.25rem 1.5rem;border:1px solid var(--border);}
+  .field-card .icon{font-size:1.5rem;margin-bottom:0.5rem;}
+  .field-card h3{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:0.25rem;}
+  .field-card p{font-size:13px;color:var(--muted);}
+
+  /* HOBBIES */
+  #hobbies{background:var(--white);}
+  .hobby-list{display:flex;flex-wrap:wrap;gap:0.75rem;}
+  .hobby-tag{display:flex;align-items:center;gap:0.5rem;background:var(--teal-light);color:var(--teal);border-radius:99px;padding:0.5rem 1.1rem;font-size:14px;font-weight:500;}
+
+  /* DIVERSITY */
+  #diversity{background:var(--bg);}
+  .diversity-box{border-left:4px solid var(--teal);padding:1.25rem 1.5rem;background:#fff;border-radius:0 10px 10px 0;}
+  .diversity-box p{color:var(--muted);font-size:15px;}
+
+  /* PORTFOLIO */
+  #portfolio{background:var(--white);}
+  .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;}
+  .project-card{border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;transition:box-shadow 0.2s;}
+  .project-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+  .project-card .tag{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;}
+  .project-card h3{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:0.4rem;}
+  .project-card p{font-size:13px;color:var(--muted);margin-bottom:1rem;}
+  .project-card a{font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;}
+  .project-card a:hover{text-decoration:underline;}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,0.6);text-align:center;padding:2rem;font-size:13px;}
+  footer span{color:#6ecfbf;}
+
+  @media(max-width:600px){
+    nav ul{gap:0;flex-wrap:wrap;}
+    nav a{padding:0.75rem 0.9rem;font-size:13px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#field">Field of Study</a></li>
+    <li><a href="#hobbies">Interests</a></li>
+    <li><a href="#diversity">Diversity</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <p class="hero-tag">Portfolio</p>
+    <h1>Hi, I'm <span>Fatemeh Malekpour</span></h1>
+    <p>Pre-Physician Assistant student at the University of Pittsburgh, passionate about healthcare, patient advocacy, and lifelong learning.</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn btn-primary">View My Work</a>
+      <a href="#field" class="btn btn-outline">About Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD OF STUDY -->
+<section id="field">
+  <div class="container">
+    <p class="section-label">Academic Background</p>
+    <h2>Field of Study</h2>
+    <p style="color:var(--muted);margin-bottom:1.75rem;">I am an undergraduate student at the University of Pittsburgh studying Natural Science on the Pre-Physician Assistant track. My coursework spans biology, chemistry, anatomy, and health sciences — all aimed at preparing me for a career as a Physician Assistant serving diverse patient populations.</p>
+    <div class="field-grid">
+      <div class="field-card">
+        <div class="icon">🎓</div>
+        <h3>University of Pittsburgh</h3>
+        <p>B.S. Natural Science — Pre-PA Track</p>
+      </div>
+      <div class="field-card">
+        <div class="icon">🩺</div>
+        <h3>Clinical Sciences</h3>
+        <p>Anatomy, Physiology, Pathology, Patient Care</p>
+      </div>
+      <div class="field-card">
+        <div class="icon">🔬</div>
+        <h3>Natural Sciences</h3>
+        <p>Biology, Chemistry, Biochemistry, Microbiology</p>
+      </div>
+      <div class="field-card">
+        <div class="icon">📋</div>
+        <h3>Health Communication</h3>
+        <p>Technical writing, patient education, research</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies">
+  <div class="container">
+    <p class="section-label">Beyond the Classroom</p>
+    <h2>Hobbies &amp; Interests</h2>
+    <p style="color:var(--muted);margin-bottom:1.75rem;">Outside of academics, I believe in nurturing a balanced life. My hobbies keep me grounded, creative, and energized — qualities that I bring into my work in healthcare and communication.</p>
+    <div class="hobby-list">
+      <span class="hobby-tag">🎬 Watching Films</span>
+      <span class="hobby-tag">🌿 Exploring Outdoors</span>
+      <span class="hobby-tag">🏋️ Going to the Gym</span>
+      <span class="hobby-tag">🍳 Cooking &amp; Recipes</span>
+      <span class="hobby-tag">📖 Health Research</span>
+    </div>
+    <p style="margin-top:1.5rem;color:var(--muted);font-size:15px;">Cooking, in particular, connects me to my cultural background and has deepened my understanding of nutrition — something directly relevant to patient wellness. Time at the gym has taught me discipline and consistency, while films have sharpened my empathy and storytelling instincts.</p>
+  </div>
+</section>
+
+<!-- DIVERSITY -->
+<section id="diversity">
+  <div class="container">
+    <p class="section-label">Values &amp; Perspective</p>
+    <h2>Diversity Statement</h2>
+    <div class="diversity-box">
+      <p>As a first-generation college student and a woman of Iranian heritage navigating the healthcare field, I understand firsthand what it means to feel underrepresented in academic and professional spaces. This experience drives my commitment to culturally competent, equitable care. I believe that diverse perspectives make medicine stronger — that when providers reflect the communities they serve, patients receive more compassionate and effective care.</p>
+      <br>
+      <p>In my studies and in my future career as a Physician Assistant, I am committed to advocating for patients from all backgrounds, bridging language and cultural barriers, and creating environments where every person feels seen and heard. Diversity isn't a checkbox — it's a clinical and ethical imperative.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <p class="section-label">My Work</p>
+    <h2>Portfolio</h2>
+    <p style="color:var(--muted);margin-bottom:1.75rem;">A selection of projects completed throughout my coursework, demonstrating skills in research, professional writing, health communication, and digital media.</p>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <p class="tag">Web Writing</p>
+        <h3>Intro Webtext</h3>
+        <p>An introductory digital essay exploring my path toward healthcare and the role of patient advocacy.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="tag">Professional Writing</p>
+        <h3>Resume</h3>
+        <p>A professionally formatted resume highlighting clinical experience, academics, and skills.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="tag">Business Writing</p>
+        <h3>Memos</h3>
+        <p>Formal memos addressing healthcare policy topics and internal communication scenarios.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="tag">Research Writing</p>
+        <h3>Proposal</h3>
+        <p>A research-backed proposal on improving health literacy in underserved communities.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="tag">Technical Writing</p>
+        <h3>Training Manual</h3>
+        <p>A step-by-step instructional manual designed for clinical or academic onboarding purposes.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="tag">Audio / Media</p>
+        <h3>Podcast Episode</h3>
+        <p>An audio project discussing a current health issue, blending research with accessible storytelling.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built by <span>Fatemeh Malekpour</span> &mdash; University of Pittsburgh &mdash; Pre-PA Natural Science</p>
+</footer>
+
+</body>
+</html>
